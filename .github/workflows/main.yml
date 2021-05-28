@@ -1,0 +1,14 @@
+name: terraform lint
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  tflint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: checkout repository
+
+      - uses: terraform-linters/setup-tflint@v1
+        name: setup tflint
