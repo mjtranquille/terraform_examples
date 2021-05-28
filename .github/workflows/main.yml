@@ -12,3 +12,6 @@ jobs:
 
       - uses: terraform-linters/setup-tflint@v1
         name: setup tflint
+      
+      - name: run tflint
+        run: tflint -f compact
